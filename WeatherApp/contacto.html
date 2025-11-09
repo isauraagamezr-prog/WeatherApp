@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - WeatherApp</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">🌤️ WeatherApp</h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <h2>Contáctanos</h2>
+                <p>¿Tienes alguna pregunta o sugerencia? Escríbenos</p>
+
+                <form id="contactForm" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input 
+                            type="text" 
+                            id="nombre" 
+                            name="nombre" 
+                            required
+                            placeholder="Ej: Juan Pérez"
+                        >
+                        <span class="error-text" id="errorNombre"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico *</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required
+                            placeholder="ejemplo@correo.com"
+                        >
+                        <span class="error-text" id="errorEmail"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea 
+                            id="mensaje" 
+                            name="mensaje" 
+                            rows="5" 
+                            required
+                            placeholder="Escribe tu mensaje aquí (mínimo 10 caracteres)"
+                        ></textarea>
+                        <span class="error-text" id="errorMensaje"></span>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                </form>
+
+                <div id="successMessage" class="success-message"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 WeatherApp. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/validaciones.js"></script>
+</body>
+</html>
