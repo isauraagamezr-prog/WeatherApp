@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp - Consulta el Clima</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">🌤️ WeatherApp</h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Consulta el Clima de tu Ciudad</h2>
+                <p>Obtén información meteorológica en tiempo real</p>
+                
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        id="cityInput" 
+                        placeholder="Ingresa el nombre de la ciudad..."
+                        autocomplete="off"
+                    >
+                    <button id="searchBtn" class="btn-primary">
+                        🔍 Buscar
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="results">
+            <div class="container">
+                <div id="weatherContainer" class="weather-container"></div>
+                <div id="errorMessage" class="error-message"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 WeatherApp. Creado por Isaura Agamez. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/clima.js"></script>
+</body>
+</html>
